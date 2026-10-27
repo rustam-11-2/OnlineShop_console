@@ -12,6 +12,8 @@ namespace WinFormOnlineShop_2026
             catalog.Add(new Product("Майка", 1005, "с принтом"));
             catalog.Add(new Product("Тапки", 250, "пляжные"));
             catalog.Add(new Product("Тетрадь", 17, "по информатике"));
+
+          
             ShowCatalog();
         }
 

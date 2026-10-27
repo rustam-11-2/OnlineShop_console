@@ -9,6 +9,7 @@ namespace OnlineShop
     public class Catalog
     {
         List<Product> listProducts = new List<Product>();
+        
 
         public Product this[int index]
         {
@@ -32,7 +33,7 @@ namespace OnlineShop
         }
 
         public void Add(Product product)
-        { 
+        {
             listProducts.Add(product);
         }
 
