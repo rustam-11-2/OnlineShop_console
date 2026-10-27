@@ -46,7 +46,8 @@ namespace WinFormOnlineShop_2026
 
         private void cartViewBtn_Click(object sender, EventArgs e)
         {
-
+            CartForm cartForm = new CartForm(cart);
+            cartForm.ShowDialog();
         }
     }
 }
