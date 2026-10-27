@@ -33,9 +33,11 @@
             label1 = new Label();
             splitter1 = new Splitter();
             panelProduct = new Panel();
+            button1 = new Button();
             labelDescription = new Label();
             labelProductName = new Label();
             label2 = new Label();
+            cartViewBtn = new Button();
             panelCatalog.SuspendLayout();
             panelProduct.SuspendLayout();
             SuspendLayout();
@@ -82,6 +84,8 @@
             // panelProduct
             // 
             panelProduct.BackColor = SystemColors.ControlLight;
+            panelProduct.Controls.Add(cartViewBtn);
+            panelProduct.Controls.Add(button1);
             panelProduct.Controls.Add(labelDescription);
             panelProduct.Controls.Add(labelProductName);
             panelProduct.Controls.Add(label2);
@@ -91,6 +95,17 @@
             panelProduct.Name = "panelProduct";
             panelProduct.Size = new Size(499, 600);
             panelProduct.TabIndex = 2;
+            // 
+            // button1
+            // 
+            button1.AutoSize = true;
+            button1.Location = new Point(295, 518);
+            button1.Name = "button1";
+            button1.Size = new Size(159, 30);
+            button1.TabIndex = 4;
+            button1.Text = "Добавить в корзину";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // labelDescription
             // 
@@ -122,6 +137,16 @@
             label2.TabIndex = 1;
             label2.Text = "Карточка товара";
             // 
+            // cartViewBtn
+            // 
+            cartViewBtn.Location = new Point(393, 12);
+            cartViewBtn.Name = "cartViewBtn";
+            cartViewBtn.Size = new Size(94, 29);
+            cartViewBtn.TabIndex = 5;
+            cartViewBtn.Text = "Корзина";
+            cartViewBtn.UseVisualStyleBackColor = true;
+            cartViewBtn.Click += cartViewBtn_Click;
+            // 
             // FormCatalog
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -133,6 +158,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormCatalog";
             Text = "Каталог";
+            Load += FormCatalog_Load;
             panelCatalog.ResumeLayout(false);
             panelCatalog.PerformLayout();
             panelProduct.ResumeLayout(false);
@@ -150,5 +176,7 @@
         private Label labelProductName;
         private Label label2;
         private Label labelDescription;
+        private Button button1;
+        private Button cartViewBtn;
     }
 }

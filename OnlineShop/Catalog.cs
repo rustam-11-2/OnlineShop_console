@@ -23,9 +23,9 @@ namespace OnlineShop
 
             get
             {
-                index--;
                 if (index >= 0 && index < listProducts.Count)
                     return listProducts[index]; 
+                //index--;
                 throw new IndexOutOfRangeException();    
             }
 
